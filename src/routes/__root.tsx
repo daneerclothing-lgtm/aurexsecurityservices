@@ -9,6 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { FloatingActions } from "@/components/site/FloatingActions";
 
 function NotFoundComponent() {
   return (
@@ -72,19 +75,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Aurex Security Services | SIA Licensed UK Security Company" },
+      { name: "description", content: "Aurex Security (AX) delivers SIA licensed manned guarding, CCTV monitoring, event and corporate security across the UK. 24/7 response, fully insured." },
+      { name: "author", content: "Aurex Security Services" },
+      { name: "theme-color", content: "#0c0f1a" },
+      { property: "og:title", content: "Aurex Security Services | SIA Licensed UK Security Company" },
+      { property: "og:description", content: "Premium UK security services. SIA licensed officers, CCTV monitoring, event & corporate protection." },
+      { property: "og:site_name", content: "Aurex Security" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@AurexSecurity" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SecurityService",
+          name: "Aurex Security Services",
+          alternateName: "AX Security",
+          areaServed: "United Kingdom",
+          telephone: "+44 20 4525 8800",
+          email: "info@aurexsecurity.co.uk",
+          url: "/",
+        }),
       },
     ],
   }),
@@ -113,7 +139,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="min-h-screen flex flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <SiteFooter />
+        <FloatingActions />
+      </div>
     </QueryClientProvider>
   );
 }
