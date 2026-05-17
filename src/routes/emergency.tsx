@@ -37,7 +37,7 @@ function EmergencyPage() {
           {[
             { i: Clock, t: "24/7", d: "Senior controllers always on shift." },
             { i: Zap, t: "Rapid", d: "Mobile response within SLA across UK." },
-            { i: ShieldCheck, t: "Vetted", d: "100% SIA-licensed and BS 7858 vetted." },
+            { i: ShieldCheck, t: "Vetted", d: "100% SIA-licensed officers with full training." },
             { i: Phone, t: "Direct", d: "Speak to a controller, never a queue." },
           ].map((b) => (
             <div key={b.t} className="glass rounded-md p-6">
