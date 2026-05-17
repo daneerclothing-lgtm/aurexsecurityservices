@@ -51,6 +51,6 @@ export const POSTS = [
   { slug: "construction-theft-prevention", title: "Construction Site Theft: A Practical Prevention Playbook", category: "Construction", date: "28 Apr 2025", excerpt: "Five battle-tested measures that consistently drive site-theft incidents to zero." },
   { slug: "cctv-best-practices", title: "CCTV Monitoring Best Practices for UK Businesses", category: "CCTV", date: "14 Apr 2025", excerpt: "How to design a control-room-grade CCTV strategy that pays for itself." },
   { slug: "event-security-checklist", title: "The 2025 Event Security Checklist Every Organiser Needs", category: "Events", date: "02 Apr 2025", excerpt: "Crowd dynamics, ProtectDuty readiness and contingency planning, distilled." },
-  { slug: "sia-licensing-explained", title: "SIA Licensing Explained: What Buyers Should Verify", category: "Compliance", date: "20 Mar 2025", excerpt: "A buyer's guide to SIA licensing, ACS accreditation and BS 7858 vetting." },
+  { slug: "sia-licensing-explained", title: "SIA Licensing Explained: What Buyers Should Verify", category: "Compliance", date: "20 Mar 2025", excerpt: "A buyer's guide to SIA licensing and what to verify before appointing a security provider." },
   { slug: "lone-worker-protection", title: "Protecting Lone Workers After Hours", category: "Workplace", date: "06 Mar 2025", excerpt: "Practical, low-cost measures that meaningfully reduce lone-worker risk." },
 ] as const;
