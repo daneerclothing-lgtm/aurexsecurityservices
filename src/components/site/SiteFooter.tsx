@@ -34,7 +34,6 @@ export function SiteFooter() {
             {[
               { to: "/about", label: "About Us" },
               { to: "/services", label: "Security Services" },
-              { to: "/industries", label: "Industries" },
               { to: "/careers", label: "Careers" },
               { to: "/blog", label: "News & Insights" },
               { to: "/contact", label: "Contact" },
@@ -54,7 +53,7 @@ export function SiteFooter() {
             <li>Retail Security</li>
             <li>Event Security</li>
             <li>CCTV Monitoring</li>
-            <li>Concierge & Reception</li>
+            <li>Concierge & Hotel Security</li>
           </ul>
         </div>
 
