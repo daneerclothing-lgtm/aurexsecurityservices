@@ -7,7 +7,7 @@ import eventImg from "@/assets/event-security.jpg";
 import { Section } from "@/components/site/Section";
 import { Counter } from "@/components/site/Counter";
 import { QuoteForm } from "@/components/site/QuoteForm";
-import { SERVICES, INDUSTRIES, WHY_CHOOSE, TESTIMONIALS, CASE_STUDIES } from "@/lib/site-data";
+import { SERVICES, WHY_CHOOSE, TESTIMONIALS, CASE_STUDIES } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
