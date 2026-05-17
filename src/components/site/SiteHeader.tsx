@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, Phone, ShieldCheck, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
