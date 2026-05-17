@@ -26,7 +26,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50">
       <div className="hidden md:block bg-charcoal/90 text-xs text-muted-foreground border-b border-border/40">
         <div className="max-w-7xl mx-auto container-px flex items-center justify-between h-9">
-          <span className="inline-flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-gold" /> SIA Licensed · Fully Insured · UK Wide</span>
+          <span className="inline-flex items-center gap-2"><ShieldCheck className="h-3.5 w-3.5 text-gold" /> Fully Insured</span>
           <div className="flex items-center gap-6">
             <a href="tel:+442045258800" className="inline-flex items-center gap-1.5 hover:text-gold transition-colors">
               <Phone className="h-3.5 w-3.5 text-gold" /> +44 20 4525 8800
