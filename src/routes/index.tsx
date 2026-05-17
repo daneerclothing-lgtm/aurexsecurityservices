@@ -1,13 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Clock, BadgeCheck, MapPin, Star, Quote, Phone, ChevronRight } from "lucide-react";
 import heroImg from "@/assets/hero-guard.jpg";
-import cctvImg from "@/assets/cctv-room.jpg";
 import constructionImg from "@/assets/construction-security.jpg";
 import eventImg from "@/assets/event-security.jpg";
 import { Section } from "@/components/site/Section";
 import { Counter } from "@/components/site/Counter";
 import { QuoteForm } from "@/components/site/QuoteForm";
-import { SERVICES, INDUSTRIES, WHY_CHOOSE, TESTIMONIALS, CASE_STUDIES } from "@/lib/site-data";
+import { SERVICES, WHY_CHOOSE, TESTIMONIALS, CASE_STUDIES } from "@/lib/site-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -123,10 +122,10 @@ function HomePage() {
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              Every officer we deploy is SIA licensed, BS 7858 vetted, DBS-checked and trained against an internal operating standard refined across hundreds of UK contracts. From reception desks to high-risk construction sites, our officers represent your brand with discipline and discretion.
+              Every officer we deploy is SIA licensed and trained against an internal operating standard refined across hundreds of UK contracts. From reception desks to high-risk construction sites, our officers represent your brand with discipline and discretion.
             </p>
             <ul className="grid sm:grid-cols-2 gap-3 text-sm">
-              {["100% SIA Licensed","BS 7858 Vetted","DBS Checked","ACS Aligned","ISO 9001 Processes","£10M Public Liability"].map((x) => (
+              {["100% SIA Licensed","Sector-Specific Training","Health & Safety Compliant","Live Reporting","GPS Patrol Verified","Dedicated Account Manager"].map((x) => (
                 <li key={x} className="flex items-center gap-2.5"><ShieldCheck className="h-4 w-4 text-gold" /> {x}</li>
               ))}
             </ul>
@@ -148,82 +147,6 @@ function HomePage() {
           </div>
         </div>
       </Section>
-
-      {/* SERVICES */}
-      <Section eyebrow="Security Services" title={<>Comprehensive protection, <span className="gradient-gold-text">tailored precisely</span> to your sector.</>} description="From discreet corporate protection to large-scale event security, our services are built to scale with your operation.">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <Link key={s.slug} to="/services" className="group relative rounded-md border border-border/60 bg-surface/60 p-7 overflow-hidden transition-all hover:border-gold/50 hover:-translate-y-1 hover:shadow-luxe">
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-[radial-gradient(circle_at_top_left,oklch(0.82_0.13_85/0.12),transparent_60%)]" />
-              <div className="relative">
-                <div className="h-11 w-11 inline-flex items-center justify-center rounded-sm border border-gold/30 bg-charcoal/60 mb-5 group-hover:shadow-gold-glow transition-shadow">
-                  <s.icon className="h-5 w-5 text-gold" />
-                </div>
-                <h3 className="font-display text-xl mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                <ul className="mt-4 space-y-1.5">
-                  {s.points.map((p) => (
-                    <li key={p} className="text-xs text-foreground/70 flex items-center gap-2"><span className="h-1 w-1 rounded-full bg-gold" /> {p}</li>
-                  ))}
-                </ul>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-gold">Learn More <ChevronRight className="h-3.5 w-3.5" /></span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      {/* INDUSTRIES */}
-      <Section eyebrow="Industries We Protect" title={<>Sector specialists across <span className="gradient-gold-text">the UK economy.</span></>}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {INDUSTRIES.map((i) => (
-            <div key={i.slug} className="group p-7 rounded-md border border-border/60 bg-surface/40 hover:border-gold/40 transition-all hover:bg-surface/70">
-              <div className="flex items-center gap-4 mb-3">
-                <i.icon className="h-6 w-6 text-gold" />
-                <h3 className="font-display text-lg">{i.title}</h3>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{i.desc}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* SIA COMPLIANCE */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <img src={cctvImg} alt="UK CCTV monitoring control room" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1080} loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
-        <div className="relative max-w-7xl mx-auto container-px grid gap-12 lg:grid-cols-2">
-          <div>
-            <div className="inline-flex items-center gap-3 mb-5">
-              <span className="h-px w-8 bg-gold" />
-              <span className="text-[11px] uppercase tracking-[0.28em] text-gold">SIA Compliance</span>
-            </div>
-            <h2 className="font-display text-3xl md:text-5xl leading-[1.05]">Government-grade vetting, <span className="gradient-gold-text">end to end.</span></h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              We operate to the standards expected of UK enterprise and public-sector clients. Every officer, every site, every shift — accountable, documented and auditable.
-            </p>
-            <ul className="mt-8 grid sm:grid-cols-2 gap-3 text-sm">
-              {["SIA Licensing Verified","BS 7858 Background Checks","Sector-Specific Training","Health & Safety Compliant","UK Legislation Aligned","Risk Assessment Process","ACS-Aligned Operations","GDPR Compliant Reporting"].map((x) => (
-                <li key={x} className="flex items-center gap-2.5"><BadgeCheck className="h-4 w-4 text-gold" /> {x}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { k: "SIA", v: "Licensed" },
-              { k: "BS 7858", v: "Vetted" },
-              { k: "ISO 9001", v: "Aligned" },
-              { k: "GDPR", v: "Compliant" },
-            ].map((b) => (
-              <div key={b.k} className="glass rounded-md p-7 text-center">
-                <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">{b.k}</div>
-                <div className="mt-2 font-display text-2xl gradient-gold-text">{b.v}</div>
-                <div className="mt-3 mx-auto h-px w-10 bg-gold/40" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* WHY CHOOSE */}
       <Section eyebrow="Why Aurex" title={<>The qualities <span className="gradient-gold-text">enterprise UK clients</span> insist on.</>}>

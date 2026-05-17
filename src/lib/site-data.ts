@@ -1,4 +1,4 @@
-import { Building2, HardHat, ShoppingBag, Calendar, Cctv, Siren, ConciergeBell, Warehouse, Hotel, Home, Flame, BellRing, GraduationCap, Truck, Users, ShieldCheck, Clock, BadgeCheck, Zap, Cog, PoundSterling, Sparkles } from "lucide-react";
+import { Building2, HardHat, ShoppingBag, Calendar, Cctv, Siren, ConciergeBell, Warehouse, Hotel, BellRing, Truck, Users, ShieldCheck, Clock, BadgeCheck, Zap, Cog, PoundSterling, Sparkles } from "lucide-react";
 
 export const SERVICES = [
   { slug: "corporate", title: "Corporate Security", icon: Building2, desc: "Discreet, suited officers safeguarding HQs, boardrooms and executives.", points: ["Front-of-house & access control", "Threat assessments", "Visitor screening"] },
@@ -7,13 +7,9 @@ export const SERVICES = [
   { slug: "event", title: "Event Security", icon: Calendar, desc: "Crowd management for galas, festivals, conferences and stadia.", points: ["Crowd dynamics planning", "VIP protection", "Stewarding teams"] },
   { slug: "cctv", title: "CCTV Monitoring", icon: Cctv, desc: "Manned 24/7 control room with rapid verification and dispatch.", points: ["Live monitoring", "Incident verification", "Police liaison"] },
   { slug: "alarm", title: "Alarm Response", icon: Siren, desc: "SIA-licensed keyholders responding within rapid SLAs across the UK.", points: ["Keyholding service", "Lock/unlock", "Post-incident reporting"] },
-  { slug: "concierge", title: "Concierge Security", icon: ConciergeBell, desc: "Five-star front-desk presence for premium residential and offices.", points: ["Guest reception", "Parcel handling", "Resident liaison"] },
+  { slug: "concierge", title: "Concierge & Hotel Security", icon: ConciergeBell, desc: "Five-star front-desk and hospitality security for hotels, premium residential and corporate offices.", points: ["Guest reception & lobby security", "Parcel handling & night audits", "Resident & guest welfare", "Discreet brand-aligned presence"] },
   { slug: "warehouse", title: "Warehouse Security", icon: Warehouse, desc: "Asset protection, access control and goods-in/out verification.", points: ["Loading bay control", "Driver verification", "ANPR integration"] },
-  { slug: "hotel", title: "Hotel Security", icon: Hotel, desc: "Discreet protection that complements luxury hospitality standards.", points: ["Lobby security", "Night audits", "Guest welfare"] },
-  { slug: "residential", title: "Residential Security", icon: Home, desc: "High-net-worth estate protection and gated community patrols.", points: ["Estate patrols", "Resident protocols", "Discreet officers"] },
-  { slug: "fire", title: "Fire Marshal Services", icon: Flame, desc: "Trained fire marshals for offices, events and construction sites.", points: ["Risk assessments", "Evacuation drills", "Fire warden cover"] },
   { slug: "reception", title: "Reception Security", icon: BellRing, desc: "Polished officers blending hospitality with full security duties.", points: ["Switchboard cover", "Visitor management", "Access systems"] },
-  { slug: "education", title: "Educational Security", icon: GraduationCap, desc: "Safeguarding-aware officers for schools, colleges and universities.", points: ["DBS-checked staff", "Safeguarding training", "Campus patrols"] },
 ] as const;
 
 export const INDUSTRIES = [
@@ -21,22 +17,19 @@ export const INDUSTRIES = [
   { slug: "corporate", title: "Corporate Offices", icon: Building2, desc: "Reception, access control and executive protection programmes." },
   { slug: "retail", title: "Retail Stores", icon: ShoppingBag, desc: "Visible deterrence and intelligence-led loss prevention." },
   { slug: "shopping", title: "Shopping Centres", icon: ShoppingBag, desc: "Concourse patrols, response teams and CCTV control rooms." },
-  { slug: "education", title: "Schools & Universities", icon: GraduationCap, desc: "Safeguarding-trained officers and after-hours protection." },
   { slug: "hotels", title: "Hotels", icon: Hotel, desc: "Five-star aware security for guests, lobbies and back-of-house." },
   { slug: "logistics", title: "Logistics & Warehouses", icon: Truck, desc: "Goods-in/out, loading bays and high-value asset protection." },
   { slug: "events", title: "Events & Festivals", icon: Calendar, desc: "Crowd safety, accreditation, VIP and perimeter security." },
-  { slug: "residential", title: "Residential", icon: Home, desc: "Gated estates, HNW residences and luxury developments." },
 ] as const;
 
 export const WHY_CHOOSE = [
   { icon: Clock, title: "24/7 Response", desc: "Round-the-clock dispatch from our UK control room." },
   { icon: Users, title: "Experienced Guards", desc: "Vetted officers with sector-specific operational training." },
   { icon: Zap, title: "Rapid Deployment", desc: "Mobilise officers across the UK within hours, not days." },
-  { icon: BadgeCheck, title: "Fully Licensed", desc: "100% SIA-licensed, DBS-checked and BS 7858 vetted." },
+  { icon: BadgeCheck, title: "Fully Licensed", desc: "100% SIA-licensed officers with ongoing compliance checks." },
   { icon: Cog, title: "Modern Technology", desc: "GPS patrol logs, body-worn video and live reporting." },
   { icon: PoundSterling, title: "Competitive Pricing", desc: "Transparent, scalable contracts with no hidden fees." },
   { icon: Sparkles, title: "Tailored Solutions", desc: "Bespoke deployment plans built around your risk profile." },
-  { icon: ShieldCheck, title: "Insured £10M", desc: "Comprehensive public liability and employer's insurance." },
 ] as const;
 
 export const TESTIMONIALS = [
@@ -58,6 +51,6 @@ export const POSTS = [
   { slug: "construction-theft-prevention", title: "Construction Site Theft: A Practical Prevention Playbook", category: "Construction", date: "28 Apr 2025", excerpt: "Five battle-tested measures that consistently drive site-theft incidents to zero." },
   { slug: "cctv-best-practices", title: "CCTV Monitoring Best Practices for UK Businesses", category: "CCTV", date: "14 Apr 2025", excerpt: "How to design a control-room-grade CCTV strategy that pays for itself." },
   { slug: "event-security-checklist", title: "The 2025 Event Security Checklist Every Organiser Needs", category: "Events", date: "02 Apr 2025", excerpt: "Crowd dynamics, ProtectDuty readiness and contingency planning, distilled." },
-  { slug: "sia-licensing-explained", title: "SIA Licensing Explained: What Buyers Should Verify", category: "Compliance", date: "20 Mar 2025", excerpt: "A buyer's guide to SIA licensing, ACS accreditation and BS 7858 vetting." },
+  { slug: "sia-licensing-explained", title: "SIA Licensing Explained: What Buyers Should Verify", category: "Compliance", date: "20 Mar 2025", excerpt: "A buyer's guide to SIA licensing and what to verify before appointing a security provider." },
   { slug: "lone-worker-protection", title: "Protecting Lone Workers After Hours", category: "Workplace", date: "06 Mar 2025", excerpt: "Practical, low-cost measures that meaningfully reduce lone-worker risk." },
 ] as const;

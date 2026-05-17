@@ -36,14 +36,14 @@ function AboutPage() {
         <div className="grid gap-10 lg:grid-cols-2 items-start">
           <div className="space-y-5 text-muted-foreground leading-relaxed">
             <p>Aurex Security Services was founded to raise the bar for UK manned guarding — a sector too often defined by inconsistency. We deliver an enterprise-grade service to clients who expect their security partner to operate with the same rigour as their own organisation.</p>
-            <p>Our officers are vetted to BS 7858, SIA licensed and trained to internal operating standards refined across hundreds of contracts. From discreet corporate concierge to large-scale event security, our presence reflects the standards of the brands we protect.</p>
+            <p>Our officers are SIA licensed and trained to internal operating standards refined across hundreds of contracts. From discreet corporate concierge to large-scale event security, our presence reflects the standards of the brands we protect.</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
               { i: Target, t: "Mission-Led", d: "A single operating standard across every contract." },
               { i: Users, t: "People First", d: "Vetted, trained and supported senior officers." },
               { i: Award, t: "Audit Ready", d: "Documented, ISO-aligned operational processes." },
-              { i: ShieldCheck, t: "Compliant", d: "SIA, ACS-aligned and GDPR compliant by design." },
+              { i: ShieldCheck, t: "Compliant", d: "SIA licensed and GDPR compliant by design." },
             ].map((b) => (
               <div key={b.t} className="rounded-md border border-border/60 bg-surface/40 p-6">
                 <b.i className="h-5 w-5 text-gold mb-3" />
