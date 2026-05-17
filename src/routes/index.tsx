@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Clock, BadgeCheck, MapPin, Star, Quote, Phone, ChevronRight } from "lucide-react";
 import heroImg from "@/assets/hero-guard.jpg";
-import cctvImg from "@/assets/cctv-room.jpg";
 import constructionImg from "@/assets/construction-security.jpg";
 import eventImg from "@/assets/event-security.jpg";
 import { Section } from "@/components/site/Section";
