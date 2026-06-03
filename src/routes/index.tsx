@@ -56,7 +56,7 @@ function HomePage() {
               <Link to="/contact" className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-medium text-primary-foreground bg-[image:var(--gradient-gold)] hover:brightness-110 transition-all shadow-gold-glow">
                 Get Free Quote <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <a href="tel:+442045258800" className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-medium border border-gold/40 text-foreground hover:bg-gold/10 hover:border-gold transition-all">
+              <a href="tel:+447723406782" className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-medium border border-gold/40 text-foreground hover:bg-gold/10 hover:border-gold transition-all">
                 <Phone className="h-4 w-4 text-gold" /> Emergency Security Contact
               </a>
             </div>
@@ -241,8 +241,8 @@ function HomePage() {
             </div>
             <div className="glass rounded-md p-6">
               <div className="text-xs uppercase tracking-[0.22em] text-gold mb-2">Direct Line</div>
-              <a href="tel:+442045258800" className="font-display text-3xl gradient-gold-text">+44 20 4525 8800</a>
-              <p className="text-xs text-muted-foreground mt-3">24/7 Operations · info@aurexsecurity.co.uk</p>
+              <a href="tel:+447723406782" className="font-display text-3xl gradient-gold-text">+44 7723 406782</a>
+              <p className="text-xs text-muted-foreground mt-3">24/7 Operations · hello@aurexsecurity.co.uk</p>
             </div>
             <img src={eventImg} alt="UK event security officer" className="rounded-md w-full h-56 object-cover" loading="lazy" width={1280} height={896} />
           </div>
@@ -267,7 +267,7 @@ function HomePage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
             <a href="tel:+442045258800" className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-semibold bg-[image:var(--gradient-gold)] text-primary-foreground shadow-gold-glow hover:brightness-110 transition-all">
-              <Phone className="h-4 w-4" /> Call +44 20 4525 8800
+              <Phone className="h-4 w-4" /> Call +44 7723 406782
             </a>
             <Link to="/emergency" className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-medium border border-gold/40 hover:bg-gold/10 transition-colors">
               Emergency Details

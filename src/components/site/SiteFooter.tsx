@@ -17,7 +17,7 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            SIA licensed, fully insured manned guarding, CCTV monitoring and corporate protection across the United Kingdom.
+            Professional manned guarding, CCTV monitoring and corporate protection across the United Kingdom.
           </p>
           <div className="flex items-center gap-3 mt-6">
             {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
@@ -60,9 +60,9 @@ export function SiteFooter() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-5">Get in Touch</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> 22 Bishopsgate, London EC2N 4BQ</li>
-            <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-gold" /> <a href="tel:+442045258800" className="hover:text-gold">+44 20 4525 8800</a></li>
-            <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-gold" /> <a href="mailto:info@aurexsecurity.co.uk" className="hover:text-gold">info@aurexsecurity.co.uk</a></li>
+            <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> 100 Grant Avenue, Liverpool, England. L15 5AZ</li>
+            <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-gold" /> <a href="tel:+447723406782" className="hover:text-gold">+44 7723 406782</a></li>
+            <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-gold" /> <a href="mailto:hello@aurexsecurity.co.uk" className="hover:text-gold">hello@aurexsecurity.co.uk</a></li>
             <li className="flex items-center gap-3"><ShieldCheck className="h-4 w-4 text-gold" /> 24/7 Emergency Response</li>
           </ul>
         </div>
