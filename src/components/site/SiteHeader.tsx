@@ -27,8 +27,8 @@ export function SiteHeader() {
       <div className="hidden md:block bg-charcoal/90 text-xs text-muted-foreground border-b border-border/40">
         <div className="max-w-7xl mx-auto container-px flex items-center justify-between h-9">
           <div className="flex items-center gap-6">
-            <a href="tel:+442045258800" className="inline-flex items-center gap-1.5 hover:text-gold transition-colors">
-              <Phone className="h-3.5 w-3.5 text-gold" /> +44 20 4525 8800
+            <a href="tel:+447723406782" className="inline-flex items-center gap-1.5 hover:text-gold transition-colors">
+              <Phone className="h-3.5 w-3.5 text-gold" /> +44 7723 406782
             </a>
             <span className="text-gold font-medium tracking-wide">24/7 Emergency Line</span>
           </div>
