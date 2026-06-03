@@ -56,7 +56,7 @@ function HomePage() {
               <Link to="/contact" className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-medium text-primary-foreground bg-[image:var(--gradient-gold)] hover:brightness-110 transition-all shadow-gold-glow">
                 Get Free Quote <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <a href="tel:+442045258800" className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-medium border border-gold/40 text-foreground hover:bg-gold/10 hover:border-gold transition-all">
+              <a href="tel:+447723406782" className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-sm font-medium border border-gold/40 text-foreground hover:bg-gold/10 hover:border-gold transition-all">
                 <Phone className="h-4 w-4 text-gold" /> Emergency Security Contact
               </a>
             </div>

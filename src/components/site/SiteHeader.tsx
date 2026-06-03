@@ -94,8 +94,8 @@ export function SiteHeader() {
                 Emergency Response
               </Link>
             </nav>
-            <a href="tel:+442045258800" className="mt-6 flex items-center justify-center gap-2 px-5 py-3 rounded-sm bg-[image:var(--gradient-gold)] text-primary-foreground font-medium">
-              <Phone className="h-4 w-4" /> Call +44 20 4525 8800
+            <a href="tel:+447723406782" className="mt-6 flex items-center justify-center gap-2 px-5 py-3 rounded-sm bg-[image:var(--gradient-gold)] text-primary-foreground font-medium">
+              <Phone className="h-4 w-4" /> Call +44 7723 406782
             </a>
           </div>
         </div>
