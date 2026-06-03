@@ -18,9 +18,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const OFFICES = [
-  { city: "London (HQ)", addr: "22 Bishopsgate, London EC2N 4BQ", phone: "+44 20 4525 8800" },
-  { city: "Manchester", addr: "1 Spinningfields, Manchester M3 3AP", phone: "+44 161 506 0900" },
-  { city: "Birmingham", addr: "Colmore Plaza, Birmingham B3 2BJ", phone: "+44 121 314 5500" },
+  { city: "Liverpool (HQ)", addr: "100 Grant Avenue, Liverpool, England. L15 5AZ", phone: "+44 7723 406782" },
 ];
 
 function ContactPage() {
@@ -38,7 +36,7 @@ function ContactPage() {
             </div>
           ))}
           <div className="glass rounded-md p-6 space-y-3 text-sm">
-            <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-gold" /> <a href="mailto:info@aurexsecurity.co.uk" className="hover:text-gold">info@aurexsecurity.co.uk</a></div>
+            <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-gold" /> <a href="mailto:hello@aurexsecurity.co.uk" className="hover:text-gold">hello@aurexsecurity.co.uk</a></div>
             <div className="flex items-center gap-3"><Clock className="h-4 w-4 text-gold" /> Operations: 24/7 · Sales: Mon–Sat 8am–8pm</div>
           </div>
         </div>
