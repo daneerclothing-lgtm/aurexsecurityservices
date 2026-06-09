@@ -31,6 +31,24 @@ export function QuoteForm() {
       return;
     }
     setErrors({});
+    const d = parsed.data;
+    const subject = `New Security Quote Request — ${d.name}${d.company ? ` (${d.company})` : ""}`;
+    const body = [
+      `Name: ${d.name}`,
+      `Company: ${d.company || "-"}`,
+      `Email: ${d.email}`,
+      `Phone: ${d.phone}`,
+      `Service: ${d.service}`,
+      `Location: ${d.location}`,
+      `Budget: ${d.budget}`,
+      "",
+      "Message:",
+      d.message || "-",
+    ].join("\n");
+    const mailto = `mailto:hello@aurexsecurity.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (typeof window !== "undefined") {
+      window.location.href = mailto;
+    }
     setDone(true);
   }
 
