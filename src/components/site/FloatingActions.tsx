@@ -13,7 +13,7 @@ export function FloatingActions() {
     <>
       <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3">
         <a
-          href="https://wa.me/442045258800"
+          href="https://wa.me/447723406782"
           aria-label="WhatsApp"
           target="_blank"
           rel="noreferrer"
@@ -23,7 +23,7 @@ export function FloatingActions() {
           <MessageCircle className="h-5 w-5" />
         </a>
         <a
-          href="tel:+442045258800"
+          href="tel:+447723406782"
           aria-label="Emergency call"
           className="inline-flex items-center gap-2 pl-3 pr-4 py-3 rounded-full bg-destructive text-destructive-foreground shadow-luxe hover:brightness-110 transition-all"
         >
