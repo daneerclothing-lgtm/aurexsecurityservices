@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MessageCircle, Phone, X } from "lucide-react";
+import { Phone, X } from "lucide-react";
 
 export function FloatingActions() {
   const [showCookie, setShowCookie] = useState(false);
@@ -12,16 +12,6 @@ export function FloatingActions() {
   return (
     <>
       <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3">
-        <a
-          href="https://wa.me/447723406782"
-          aria-label="WhatsApp"
-          target="_blank"
-          rel="noreferrer"
-          className="h-13 w-13 inline-flex items-center justify-center rounded-full bg-[#25D366] text-white shadow-luxe hover:scale-105 transition-transform"
-          style={{ height: 52, width: 52 }}
-        >
-          <MessageCircle className="h-5 w-5" />
-        </a>
         <a
           href="tel:+447723406782"
           aria-label="Emergency call"
