@@ -12,5 +12,4 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "src/server.ts" },
   },
-  nitro: true,
 });

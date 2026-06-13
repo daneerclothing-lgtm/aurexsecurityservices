@@ -1,5 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, ShieldCheck, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  ShieldCheck,
+  Twitter,
+} from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -13,15 +22,23 @@ export function SiteFooter() {
             </div>
             <div>
               <div className="font-display text-lg">Aurex Security</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">UK Wide Coverage</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                UK Wide Coverage
+              </div>
             </div>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Professional manned guarding, CCTV monitoring and corporate protection across the United Kingdom.
+            Professional manned guarding, CCTV monitoring and corporate protection across the United
+            Kingdom.
           </p>
           <div className="flex items-center gap-3 mt-6">
             {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
-              <a key={i} href="#" aria-label="Social" className="h-9 w-9 inline-flex items-center justify-center rounded-full border border-border/60 hover:border-gold hover:text-gold transition-colors">
+              <a
+                key={i}
+                href="#"
+                aria-label="Social"
+                className="h-9 w-9 inline-flex items-center justify-center rounded-full border border-border/60 hover:border-gold hover:text-gold transition-colors"
+              >
                 <Icon className="h-4 w-4" />
               </a>
             ))}
@@ -39,7 +56,9 @@ export function SiteFooter() {
               { to: "/contact", label: "Contact" },
             ].map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="text-muted-foreground hover:text-gold transition-colors">{l.label}</Link>
+                <Link to={l.to} className="text-muted-foreground hover:text-gold transition-colors">
+                  {l.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -60,22 +79,48 @@ export function SiteFooter() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.2em] text-gold mb-5">Get in Touch</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> 100 Grant Avenue, Liverpool, England. L15 5AZ</li>
-            <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-gold" /> <a href="tel:+447723406782" className="hover:text-gold">+44 7723 406782</a></li>
-            <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-gold" /> <a href="mailto:hello@aurexsecurity.co.uk" className="hover:text-gold">hello@aurexsecurity.co.uk</a></li>
-            <li className="flex items-center gap-3"><ShieldCheck className="h-4 w-4 text-gold" /> 24/7 Emergency Response</li>
+            <li className="flex items-start gap-3">
+              <MapPin className="h-4 w-4 mt-0.5 text-gold" /> 100 Grant Avenue, Liverpool, England.
+              L15 5AZ
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="h-4 w-4 text-gold" />{" "}
+              <a href="tel:+447723406782" className="hover:text-gold">
+                +44 7723 406782
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Mail className="h-4 w-4 text-gold" />{" "}
+              <a href="mailto:hello@aurexsecurity.co.uk" className="hover:text-gold">
+                hello@aurexsecurity.co.uk
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <ShieldCheck className="h-4 w-4 text-gold" /> 24/7 Emergency Response
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-border/40">
         <div className="max-w-7xl mx-auto container-px py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Aurex Security Services Ltd. Company No. 14782931 · SIA ABS Member</div>
+          <div>
+            © {new Date().getFullYear()} Aurex Security Services Ltd. Company No. 14782931 · SIA ABS
+            Member
+          </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
-            <Link to="/privacy" className="hover:text-gold">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-gold">Terms & Conditions</Link>
-            <Link to="/cookies" className="hover:text-gold">Cookie Policy</Link>
-            <Link to="/gdpr" className="hover:text-gold">GDPR</Link>
+            <Link to="/privacy" className="hover:text-gold">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="hover:text-gold">
+              Terms & Conditions
+            </Link>
+            <Link to="/cookies" className="hover:text-gold">
+              Cookie Policy
+            </Link>
+            <Link to="/gdpr" className="hover:text-gold">
+              GDPR
+            </Link>
           </div>
         </div>
       </div>
