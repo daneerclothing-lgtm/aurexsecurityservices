@@ -30,21 +30,32 @@ export function FloatingActions() {
         <div className="fixed bottom-5 left-5 z-40 max-w-sm glass rounded-md p-5 shadow-luxe animate-fade-up">
           <div className="flex items-start gap-3">
             <div className="text-xs leading-relaxed text-muted-foreground">
-              We use cookies to enhance your experience and analyze site performance, in line with UK GDPR.
+              We use cookies to enhance your experience and analyze site performance, in line with
+              UK GDPR.
             </div>
-            <button onClick={() => setShowCookie(false)} aria-label="Dismiss" className="text-muted-foreground hover:text-foreground">
+            <button
+              onClick={() => setShowCookie(false)}
+              aria-label="Dismiss"
+              className="text-muted-foreground hover:text-foreground"
+            >
               <X className="h-4 w-4" />
             </button>
           </div>
           <div className="mt-4 flex items-center gap-2">
             <button
-              onClick={() => { localStorage.setItem("ax-cookie-ack", "1"); setShowCookie(false); }}
+              onClick={() => {
+                localStorage.setItem("ax-cookie-ack", "1");
+                setShowCookie(false);
+              }}
               className="px-4 py-2 text-xs font-medium rounded-sm bg-[image:var(--gradient-gold)] text-primary-foreground"
             >
               Accept
             </button>
             <button
-              onClick={() => { localStorage.setItem("ax-cookie-ack", "0"); setShowCookie(false); }}
+              onClick={() => {
+                localStorage.setItem("ax-cookie-ack", "0");
+                setShowCookie(false);
+              }}
               className="px-4 py-2 text-xs font-medium rounded-sm border border-border text-foreground/80 hover:border-gold/60"
             >
               Decline

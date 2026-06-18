@@ -10,7 +10,15 @@ interface SectionProps {
   align?: "left" | "center";
 }
 
-export function Section({ eyebrow, title, description, children, id, className = "", align = "left" }: SectionProps) {
+export function Section({
+  eyebrow,
+  title,
+  description,
+  children,
+  id,
+  className = "",
+  align = "left",
+}: SectionProps) {
   const alignCls = align === "center" ? "text-center mx-auto" : "";
   return (
     <section id={id} className={`py-20 md:py-28 ${className}`}>
@@ -23,8 +31,16 @@ export function Section({ eyebrow, title, description, children, id, className =
                 <span className="text-[11px] uppercase tracking-[0.28em] text-gold">{eyebrow}</span>
               </div>
             )}
-            {title && <h2 className="text-3xl md:text-5xl font-display leading-[1.05] text-foreground">{title}</h2>}
-            {description && <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">{description}</p>}
+            {title && (
+              <h2 className="text-3xl md:text-5xl font-display leading-[1.05] text-foreground">
+                {title}
+              </h2>
+            )}
+            {description && (
+              <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+                {description}
+              </p>
+            )}
           </div>
         )}
         {children}

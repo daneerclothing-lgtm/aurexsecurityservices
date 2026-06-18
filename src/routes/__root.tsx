@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -76,19 +77,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Aurex Security Services | SIA Licensed UK Security Company" },
-      { name: "description", content: "Aurex Security (AX) delivers SIA licensed manned guarding, CCTV monitoring, event and corporate security across the UK. 24/7 response, fully insured." },
+      {
+        name: "description",
+        content:
+          "Aurex Security (AX) delivers SIA licensed manned guarding, CCTV monitoring, event and corporate security across the UK. 24/7 response, fully insured.",
+      },
       { name: "author", content: "Aurex Security Services" },
       { name: "theme-color", content: "#0c0f1a" },
-      { property: "og:title", content: "Aurex Security Services | SIA Licensed UK Security Company" },
-      { property: "og:description", content: "Aurex Security (AX) delivers SIA licensed manned guarding, CCTV monitoring, event and corporate security across the UK. 24/7 response, fully insured." },
+      {
+        property: "og:title",
+        content: "Aurex Security Services | SIA Licensed UK Security Company",
+      },
+      {
+        property: "og:description",
+        content:
+          "Aurex Security (AX) delivers SIA licensed manned guarding, CCTV monitoring, event and corporate security across the UK. 24/7 response, fully insured.",
+      },
       { property: "og:site_name", content: "Aurex Security" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@AurexSecurity" },
-      { name: "twitter:title", content: "Aurex Security Services | SIA Licensed UK Security Company" },
-      { name: "twitter:description", content: "Aurex Security (AX) delivers SIA licensed manned guarding, CCTV monitoring, event and corporate security across the UK. 24/7 response, fully insured." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/386dd9ca-2aeb-4d41-92d1-141b4e80d86c/id-preview-45859c5a--09dc4dce-69b3-4018-96a8-42991f801a6e.lovable.app-1780489461367.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/386dd9ca-2aeb-4d41-92d1-141b4e80d86c/id-preview-45859c5a--09dc4dce-69b3-4018-96a8-42991f801a6e.lovable.app-1780489461367.png" },
+      {
+        name: "twitter:title",
+        content: "Aurex Security Services | SIA Licensed UK Security Company",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Aurex Security (AX) delivers SIA licensed manned guarding, CCTV monitoring, event and corporate security across the UK. 24/7 response, fully insured.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/386dd9ca-2aeb-4d41-92d1-141b4e80d86c/id-preview-45859c5a--09dc4dce-69b3-4018-96a8-42991f801a6e.lovable.app-1780489461367.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/386dd9ca-2aeb-4d41-92d1-141b4e80d86c/id-preview-45859c5a--09dc4dce-69b3-4018-96a8-42991f801a6e.lovable.app-1780489461367.png",
+      },
     ],
     links: [
       {
@@ -152,6 +179,7 @@ function RootComponent() {
         <SiteFooter />
         <FloatingActions />
       </div>
+      <SpeedInsights />
     </QueryClientProvider>
   );
 }

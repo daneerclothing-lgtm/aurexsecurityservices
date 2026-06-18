@@ -6,9 +6,16 @@ export const Route = createFileRoute("/emergency")({
   head: () => ({
     meta: [
       { title: "Emergency Security Response UK | Aurex Security" },
-      { name: "description", content: "24/7 emergency security response across the UK. Rapid SIA-licensed officer deployment for businesses, sites and events." },
+      {
+        name: "description",
+        content:
+          "24/7 emergency security response across the UK. Rapid SIA-licensed officer deployment for businesses, sites and events.",
+      },
       { property: "og:title", content: "Emergency Security Response — Aurex" },
-      { property: "og:description", content: "Rapid 24/7 emergency security deployment across the UK." },
+      {
+        property: "og:description",
+        content: "Rapid 24/7 emergency security deployment across the UK.",
+      },
       { property: "og:url", content: "/emergency" },
     ],
     links: [{ rel: "canonical", href: "/emergency" }],
@@ -24,12 +31,23 @@ function EmergencyPage() {
       <div className="relative max-w-7xl mx-auto container-px grid gap-10 lg:grid-cols-2 items-center">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-destructive/15 border border-destructive/40 text-xs uppercase tracking-[0.22em] text-destructive mb-5">
-            <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75 animate-ping" /><span className="relative inline-flex rounded-full h-2 w-2 bg-destructive" /></span>
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-destructive" />
+            </span>
             Live · 24/7 Operations
           </div>
-          <h1 className="font-display text-5xl md:text-7xl leading-[1.02]">Emergency security <span className="gradient-gold-text">deployed within hours.</span></h1>
-          <p className="mt-6 text-muted-foreground text-lg max-w-xl">Speak to a senior controller now for rapid SIA-licensed officer deployment, mobile response or interim cover anywhere in the UK.</p>
-          <a href="tel:+447723406782" className="mt-8 inline-flex items-center gap-3 px-9 py-5 rounded-sm font-semibold text-primary-foreground bg-[image:var(--gradient-gold)] shadow-gold-glow hover:brightness-110 transition-all">
+          <h1 className="font-display text-5xl md:text-7xl leading-[1.02]">
+            Emergency security <span className="gradient-gold-text">deployed within hours.</span>
+          </h1>
+          <p className="mt-6 text-muted-foreground text-lg max-w-xl">
+            Speak to a senior controller now for rapid SIA-licensed officer deployment, mobile
+            response or interim cover anywhere in the UK.
+          </p>
+          <a
+            href="tel:+447723406782"
+            className="mt-8 inline-flex items-center gap-3 px-9 py-5 rounded-sm font-semibold text-primary-foreground bg-[image:var(--gradient-gold)] shadow-gold-glow hover:brightness-110 transition-all"
+          >
             <Phone className="h-5 w-5" /> Call +44 7723 406782
           </a>
         </div>

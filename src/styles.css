@@ -54,7 +54,7 @@
   --popover: oklch(0.18 0.025 260);
   --popover-foreground: oklch(0.97 0.005 240);
 
-  --primary: oklch(0.82 0.13 85);          /* gold */
+  --primary: oklch(0.82 0.13 85); /* gold */
   --primary-foreground: oklch(0.16 0.02 260);
   --secondary: oklch(0.24 0.03 260);
   --secondary-foreground: oklch(0.97 0.005 240);
@@ -80,17 +80,27 @@
 
   --gradient-gold: linear-gradient(135deg, oklch(0.86 0.12 88), oklch(0.74 0.14 75));
   --gradient-dark: linear-gradient(180deg, oklch(0.14 0.02 260), oklch(0.1 0.015 260));
-  --gradient-radial-gold: radial-gradient(circle at 30% 20%, oklch(0.82 0.13 85 / 18%), transparent 60%);
+  --gradient-radial-gold: radial-gradient(
+    circle at 30% 20%,
+    oklch(0.82 0.13 85 / 18%),
+    transparent 60%
+  );
 
   --shadow-luxe: 0 30px 80px -20px oklch(0 0 0 / 0.6), 0 0 0 1px oklch(0.82 0.13 85 / 0.08);
   --shadow-gold-glow: 0 0 40px oklch(0.82 0.13 85 / 0.25);
 }
 
-.dark { color-scheme: dark; }
+.dark {
+  color-scheme: dark;
+}
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -100,13 +110,26 @@
       radial-gradient(ellipse at 90% 10%, oklch(0.4 0.1 260 / 0.18), transparent 60%);
     background-attachment: fixed;
   }
-  h1, h2, h3, h4, .font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
 }
 
 @layer utilities {
-  .text-gold { color: var(--gold); }
-  .bg-gold { background: var(--gold); }
-  .border-gold { border-color: var(--gold); }
+  .text-gold {
+    color: var(--gold);
+  }
+  .bg-gold {
+    background: var(--gold);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
   .gradient-gold-text {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
@@ -125,28 +148,59 @@
     -webkit-backdrop-filter: blur(20px) saturate(160%);
     border-bottom: 1px solid oklch(0.82 0.13 85 / 0.12);
   }
-  .shadow-luxe { box-shadow: var(--shadow-luxe); }
-  .shadow-gold-glow { box-shadow: var(--shadow-gold-glow); }
+  .shadow-luxe {
+    box-shadow: var(--shadow-luxe);
+  }
+  .shadow-gold-glow {
+    box-shadow: var(--shadow-gold-glow);
+  }
   .gold-line {
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
   }
-  .hairline-top { box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06); }
-  .container-px { padding-left: 1.25rem; padding-right: 1.25rem; }
-  @media (min-width: 768px) { .container-px { padding-left: 2rem; padding-right: 2rem; } }
+  .hairline-top {
+    box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.06);
+  }
+  .container-px {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-px {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
 
   @keyframes fade-up {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  .animate-fade-up { animation: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .animate-fade-up {
+    animation: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
 
   @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
   .shimmer-gold {
-    background: linear-gradient(90deg, oklch(0.82 0.13 85), oklch(0.95 0.05 90), oklch(0.82 0.13 85));
+    background: linear-gradient(
+      90deg,
+      oklch(0.82 0.13 85),
+      oklch(0.95 0.05 90),
+      oklch(0.82 0.13 85)
+    );
     background-size: 200% 100%;
     animation: shimmer 4s linear infinite;
     -webkit-background-clip: text;
