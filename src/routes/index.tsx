@@ -42,7 +42,7 @@ function HomePage() {
           <div className="lg:col-span-7 animate-fade-up">
             <div className="inline-flex items-center gap-3 mb-7">
               <span className="h-px w-10 bg-gold" />
-              <span className="text-[11px] uppercase tracking-[0.32em] text-gold">Premium UK Security · Est. 2022</span>
+              <span className="text-[11px] uppercase tracking-[0.32em] text-gold">Premium UK Security · Est. 2025</span>
             </div>
             <h1 className="font-display text-[clamp(2.4rem,6vw,5rem)] leading-[1.02] text-foreground">
               Trusted Professional <br />
@@ -110,10 +110,7 @@ function HomePage() {
       {/* TICKER / TRUSTED BY */}
       <section className="border-y border-border/40 bg-charcoal/60">
         <div className="max-w-7xl mx-auto container-px py-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-          <span className="text-gold/80">Trusted by leading UK organisations</span>
-          {["Carrington Build","Meridian Retail","Lattice Holdings","Atlas Events","Halcyon Hotels","Northgate Logistics"].map((c) => (
-            <span key={c} className="font-display text-base text-foreground/70">{c}</span>
-          ))}
+          <span className="text-gold/80">Hotel & Sites only in Manchester & Birmingham or outside London</span>
         </div>
       </section>
 
@@ -165,9 +162,9 @@ function HomePage() {
       <section className="py-20 bg-charcoal/70 border-y border-border/40">
         <div className="max-w-7xl mx-auto container-px grid gap-10 sm:grid-cols-3 text-center">
           {[
-            { v: 1280, suffix: "+", label: "Guards Deployed" },
-            { v: 147, suffix: "", label: "Sites Protected" },
-            { v: 9420, suffix: "+", label: "Emergency Responses" },
+            { v: 600, suffix: "+", label: "Guards Deployed" },
+            { v: 50, suffix: "", label: "Sites Protected" },
+            { v: 4000, suffix: "+", label: "Emergency Responses" },
           ].map((s) => (
             <div key={s.label}>
               <div className="font-display text-5xl md:text-6xl gradient-gold-text"><Counter to={s.v} suffix={s.suffix} /></div>
