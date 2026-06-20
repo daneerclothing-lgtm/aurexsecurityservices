@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Clock, Phone, Mail, MapPin } from "lucide-react";
 
 const Schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(80),
@@ -67,7 +67,39 @@ export function QuoteForm() {
   const err = "text-xs text-destructive mt-1";
 
   return (
-    <form onSubmit={onSubmit} className="glass rounded-md p-6 md:p-10 grid gap-5 md:grid-cols-2">
+    <div className="grid gap-8 lg:grid-cols-5">
+      {/* LEFT — what to expect + contact */}
+      <aside className="lg:col-span-2 space-y-6">
+        <div className="glass rounded-md p-6 md:p-8">
+          <div className="text-[11px] uppercase tracking-[0.22em] text-gold mb-3">What to expect</div>
+          <h3 className="font-display text-2xl leading-tight">A senior consultant — not a call centre.</h3>
+          <ul className="mt-5 space-y-4 text-sm">
+            {[
+              { icon: Clock, t: "Response within 1 business hour", d: "24/7 operations team on standby." },
+              { icon: ShieldCheck, t: "SIA-licensed officers only", d: "Vetted to BS 7858 standards." },
+              { icon: CheckCircle2, t: "No-obligation site assessment", d: "Tailored proposal, transparent pricing." },
+            ].map(({ icon: Icon, t, d }) => (
+              <li key={t} className="flex gap-3">
+                <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-sm border border-gold/40 bg-gold/10 text-gold">
+                  <Icon className="h-4 w-4" />
+                </span>
+                <div>
+                  <div className="text-foreground font-medium">{t}</div>
+                  <div className="text-muted-foreground text-xs mt-0.5">{d}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-md border border-border/60 bg-surface/50 p-6 space-y-3 text-sm">
+          <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-gold" /> <a href="tel:+447723406782" className="hover:text-gold">+44 7723 406782</a></div>
+          <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-gold" /> <a href="mailto:hello@aurexsecurity.co.uk" className="hover:text-gold">hello@aurexsecurity.co.uk</a></div>
+          <div className="flex items-start gap-3"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> 100 Grant Avenue, Liverpool, L15 5AZ</div>
+        </div>
+      </aside>
+
+      {/* RIGHT — form */}
+      <form onSubmit={onSubmit} className="lg:col-span-3 glass rounded-md p-6 md:p-10 grid gap-5 md:grid-cols-2">
       <div>
         <label className={lab}>Full Name</label>
         <input name="name" className={field} placeholder="John Smith" />
@@ -118,6 +150,7 @@ export function QuoteForm() {
         </button>
         <p className="text-xs text-muted-foreground">No obligation. Response within 1 business hour.</p>
       </div>
-    </form>
+      </form>
+    </div>
   );
 }
