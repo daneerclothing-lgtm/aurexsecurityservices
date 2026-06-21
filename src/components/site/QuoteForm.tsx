@@ -20,8 +20,9 @@ const BUDGETS = ["Under £1,000 / mo","£1,000 – £5,000 / mo","£5,000 – £
 export function QuoteForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [done, setDone] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const parsed = Schema.safeParse(Object.fromEntries(fd.entries()));
@@ -32,25 +33,34 @@ export function QuoteForm() {
       return;
     }
     setErrors({});
-    const d = parsed.data;
-    const subject = `New Security Quote Request — ${d.name}${d.company ? ` (${d.company})` : ""}`;
-    const body = [
-      `Name: ${d.name}`,
-      `Company: ${d.company || "-"}`,
-      `Email: ${d.email}`,
-      `Phone: ${d.phone}`,
-      `Service: ${d.service}`,
-      `Location: ${d.location}`,
-      `Budget: ${d.budget}`,
-      "",
-      "Message:",
-      d.message || "-",
-    ].join("\n");
-    const mailto = `mailto:hello@aurexsecurity.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    if (typeof window !== "undefined") {
-      window.location.href = mailto;
+    setSubmitting(true);
+
+    const payload = {
+      ...parsed.data,
+      _subject: `New Security Quote Request — ${parsed.data.name}${parsed.data.company ? ` (${parsed.data.company})` : ""}`,
+    };
+
+    try {
+      const res = await fetch("https://formspree.io/f/mojzgjed", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        setDone(true);
+        toast.success("Quote request sent successfully!");
+      } else {
+        toast.error("Something went wrong. Please try again or contact us directly.");
+      }
+    } catch {
+      toast.error("Network error. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
     }
-    setDone(true);
   }
 
   if (done) {
