@@ -156,8 +156,8 @@ export function QuoteForm() {
         <textarea name="message" rows={5} className={field} placeholder="Tell us about your security requirements..." />
       </div>
       <div className="md:col-span-2 flex flex-col sm:flex-row items-center gap-4 pt-2">
-        <button type="submit" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm font-medium text-primary-foreground bg-[image:var(--gradient-gold)] hover:brightness-110 transition-all shadow-gold-glow">
-          Get Free Security Assessment
+        <button type="submit" disabled={submitting} className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm font-medium text-primary-foreground bg-[image:var(--gradient-gold)] hover:brightness-110 transition-all shadow-gold-glow disabled:opacity-60 disabled:cursor-not-allowed">
+          {submitting ? "Sending…" : "Get Free Security Assessment"}
         </button>
         <p className="text-xs text-muted-foreground">No obligation. Response within 1 business hour.</p>
       </div>
