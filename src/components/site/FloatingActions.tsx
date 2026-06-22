@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Phone, X } from "lucide-react";
+import { X } from "lucide-react";
 
 export function FloatingActions() {
   const [showCookie, setShowCookie] = useState(false);
