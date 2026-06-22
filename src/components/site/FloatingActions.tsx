@@ -24,18 +24,6 @@ export function FloatingActions() {
           </svg>
           <span className="text-sm font-semibold tracking-wide hidden sm:inline">WhatsApp</span>
         </a>
-        <a
-          href="tel:+447723406782"
-          aria-label="Emergency call"
-          className="inline-flex items-center gap-2 pl-3 pr-4 py-3 rounded-full bg-destructive text-destructive-foreground shadow-luxe hover:brightness-110 transition-all"
-        >
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
-          </span>
-          <Phone className="h-4 w-4" />
-          <span className="text-sm font-semibold tracking-wide hidden sm:inline">Emergency</span>
-        </a>
       </div>
 
       {showCookie && (
