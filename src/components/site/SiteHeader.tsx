@@ -43,7 +43,7 @@ export function SiteHeader() {
             </div>
             <div className="leading-tight">
               <div className="font-display text-lg text-foreground tracking-wide">Aurex Security</div>
-              <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">A Project by YCT LTD</div>
+              <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">A Project by YCT LTD &middot; UK Est. 2025</div>
             </div>
           </Link>
 
