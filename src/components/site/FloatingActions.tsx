@@ -11,7 +11,7 @@ export function FloatingActions() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+      <div className="fixed bottom-24 right-6 z-40 flex flex-col items-end gap-3">
         <a
           href="https://wa.me/447723406782?text=Hello%20Aurex%20Security%2C%20I%20would%20like%20to%20inquire%20about%20your%20professional%20security%20services."
           target="_blank"
